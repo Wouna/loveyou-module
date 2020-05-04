@@ -1,0 +1,25 @@
+{
+  "name": "loveyou-api",
+  "version": "1.0.3",
+  "description": "A simple module for API NSFW.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "api",
+    "nsfw",
+    "loveyou",
+    "love-you"
+  ],
+  "author": "Wouna",
+  "license": "MIT",
+  "dependencies": {
+    "snekfetch": "^4.0.4"
+  },
+  "homepage": "https://love-you.xyz/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Wouna/loveyou-module"
+  }
+}
