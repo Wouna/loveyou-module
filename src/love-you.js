@@ -4,7 +4,7 @@ const Module = {
 
   async nsfw(endpoint) {
     return new Promise(async(resolve, reject) => {
-      if (!token) return reject('[Love-You] Error, no token specified');
+      if (!endpoint) return reject('[Love-You] Error, no endpoint specified');
       try {
         await snekfetch.get(`https://love-you.xyz/api/v2/${endpoint}`).then(res => {
           if (res.error) reject(res.error);
