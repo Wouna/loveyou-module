@@ -1,4 +1,4 @@
-const snekfetch = require('snekfetch');
+const axios = require('axios');
 
 const Module = {
 
@@ -6,10 +6,15 @@ const Module = {
     return new Promise(async(resolve, reject) => {
       if (!endpoint) return reject('[Love-You] Error, no endpoint specified');
       try {
-        await snekfetch.get(`https://love-you.xyz/api/v2/${endpoint}`).then(res => {
-          if (res.error) reject(res.error);
-          resolve(res.body.url)
-        }).catch(err => {
+        await axios({
+            method: 'get',
+            url: `https://love-you.xyz/api/v2/${endpoint}`,
+            responseType: 'json'
+          })
+            .then(function (response) {
+              resolve(response.data.url);
+            })
+            .catch(err => {
           return reject(err);
         });
       } catch (e) {
